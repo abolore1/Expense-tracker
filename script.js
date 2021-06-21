@@ -128,14 +128,11 @@ function editExp () {
     console.log(index)
     // get the full info about the item to update from transactions array
     if(newItemText && newItemOriginalInfo) {
-        console.log(newItemOriginalInfo)
         // object the item object info with the new details
         newItemOriginalInfo.text = newItemText
         newItemOriginalInfo.amount = newItemAmount
-        console.log(newItemOriginalInfo)
         // update the transaction array
         transactions.splice(index, 1, newItemOriginalInfo)
-        console.log(transactions)
         // update the local storage 
         updateLocalStorage()
         // re render the ui
