@@ -100,49 +100,49 @@ function updateValues() {
     money_minus.innerText = `$${(expense)}`
 }
 
-function getUpdateItemIndex(e) {
-    if(e.target.classList.contains('fa-pen')){
-     const itemValue = e.target.parentElement.firstElementChild.innerText;
-     // extract all the text in the li, returned array looks like ['steak','+7','x']
-     const itemText = e.target.parentElement.innerText.split('\n')[0] // extract the first element
-     amount.value = +itemValue;
-     text.value = itemText
+// function getUpdateItemIndex(e) {
+//     if(e.target.classList.contains('fa-pen')){
+//      const itemValue = e.target.parentElement.firstElementChild.innerText;
+//      // extract all the text in the li, returned array looks like ['steak','+7','x']
+//      const itemText = e.target.parentElement.innerText.split('\n')[0] // extract the first element
+//      amount.value = +itemValue;
+//      text.value = itemText
    
-     // Item to update
-     itemToUpdate = itemText;
-    //  console.log(item);
-     add.style.display = "none";
-     edit.style.opacity = "1";
+//      // Item to update
+//      itemToUpdate = itemText;
+//     //  console.log(item);
+//      add.style.display = "none";
+//      edit.style.opacity = "1";
 
-    }
-}
+//     }
+// }
 
-function editExp () {
-    const newItemText = text.value.trim()
-    const newItemAmount = amount.value.trim()
-    console.log(newItemText)
-    // fetch the item from the transactions array using the name(itemToUpdate)
-    const newItemOriginalInfo = transactions.find(item => item.text === itemToUpdate)
-    // get the index of the data from the transactions array
-    const index = transactions.indexOf(newItemOriginalInfo);
-    console.log(index)
-    // get the full info about the item to update from transactions array
-    if(newItemText && newItemOriginalInfo) {
-        // object the item object info with the new details
-        newItemOriginalInfo.text = newItemText
-        newItemOriginalInfo.amount = newItemAmount
-        // update the transaction array
-        transactions.splice(index, 1, newItemOriginalInfo)
-        // update the local storage 
-        updateLocalStorage()
-        // re render the ui
-        init()
+// function editExp () {
+//     const newItemText = text.value.trim()
+//     const newItemAmount = amount.value.trim()
+//     console.log(newItemText)
+//     // fetch the item from the transactions array using the name(itemToUpdate)
+//     const newItemOriginalInfo = transactions.find(item => item.text === itemToUpdate)
+//     // get the index of the data from the transactions array
+//     const index = transactions.indexOf(newItemOriginalInfo);
+//     console.log(index)
+//     // get the full info about the item to update from transactions array
+//     if(newItemText && newItemOriginalInfo) {
+//         // object the item object info with the new details
+//         newItemOriginalInfo.text = newItemText
+//         newItemOriginalInfo.amount = newItemAmount
+//         // update the transaction array
+//         transactions.splice(index, 1, newItemOriginalInfo)
+//         // update the local storage 
+//         updateLocalStorage()
+//         // re render the ui
+//         init()
       
    
-    //   addTransactionDOM()
+//     //   addTransactionDOM()
     
-    }
-}
+//     }
+// }
 
 
 
