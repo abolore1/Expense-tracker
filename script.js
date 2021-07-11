@@ -171,6 +171,6 @@ function init() {
 init();
 
 form.addEventListener('submit',addTransaction);
-list.addEventListener('click',getUpdateItemIndex);
-edit.addEventListener('click',editExp);
+// list.addEventListener('click',getUpdateItemIndex);
+// edit.addEventListener('click',editExp);
 
