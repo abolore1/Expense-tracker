@@ -10,4 +10,4 @@ Keep track of income and expenses. Add and remove items and save to local storag
 - Add new transaction and reflect in total
 - Delete items from DOM
 - Persist to local storage
-- Update and edit
+
